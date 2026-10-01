@@ -208,4 +208,22 @@
 		<item>Customize</item>
 	</string-array>
 
+	<string-array name="glass_color_type">
+		<item>@string/glass_color_type_default</item>
+		<item>@string/glass_color_type_accent</item>
+		<item>@string/glass_color_type_surface</item>
+		<item>@string/glass_color_type_black</item>
+		<item>@string/glass_color_type_white</item>
+		<item>@string/glass_color_type_custom</item>
+	</string-array>
+
+	<string-array name="glass_color_type_values">
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+	</string-array>
+
 </resources>

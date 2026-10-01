@@ -171,37 +171,24 @@
             android:launchMode="singleTask" />
         <!-- 音频播放界面 -->
         <activity
-            android:name="io.legado.app.ui.book.audio.AudioPlayActivity"
+            android:name="com.raen.legere.ui.book.audio.AudioPlayActivity"
             android:launchMode="singleTask" />
         <!-- 视频播放器界面 -->
-        <activity
-            android:name="io.legado.app.ui.video.VideoPlayerActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:launchMode="singleTask" />
+        
         <!-- 授权界面 -->
         <activity
-            android:name="io.legado.app.lib.permission.PermissionActivity"
+            android:name="com.raen.legere.lib.permission.PermissionActivity"
             android:theme="@style/Activity.Permission" />
         <!-- 二维码扫描 -->
         <activity
             android:name=".ui.qrcode.QrCodeActivity"
             android:launchMode="singleTask" />
         <!-- 规则订阅 -->
-        <activity
-            android:name=".ui.rss.subscription.RuleSubActivity"
-            android:launchMode="singleTask" />
+        
         <!-- 书源编辑 -->
-        <activity
-            android:name=".ui.book.source.edit.BookSourceEditActivity"
-            android:configChanges="locale|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+        
         <!-- 订阅源编辑 -->
-        <activity
-            android:name=".ui.rss.source.edit.RssSourceEditActivity"
-            android:configChanges="locale|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustResize|stateHidden" />
+        
         <!-- 替换规则编辑 -->
         <activity
             android:name=".ui.replace.edit.ReplaceEditActivity"
@@ -228,15 +215,9 @@
             android:launchMode="singleTask"
             android:screenOrientation="behind" />
         <!-- 书源管理 -->
-        <activity
-            android:name=".ui.book.source.manage.BookSourceActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind" />
+        
         <!-- 订阅源管理 -->
-        <activity
-            android:name=".ui.rss.source.manage.RssSourceActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind" />
+        
         <!-- txt目录规则管理 -->
         <activity
             android:name=".ui.book.toc.rule.TxtTocRuleActivity"
@@ -253,10 +234,7 @@
             android:launchMode="singleTop"
             android:screenOrientation="behind" />
         <!-- 书源调试 -->
-        <activity
-            android:name=".ui.book.source.debug.BookSourceDebugActivity"
-            android:launchMode="singleTop"
-            android:screenOrientation="behind" />
+        
         <!-- 目录 -->
         <activity
             android:name=".ui.book.toc.TocActivity"
@@ -268,15 +246,9 @@
             android:launchMode="singleTop"
             android:screenOrientation="behind" />
         <!-- RSS条目 -->
-        <activity
-            android:name=".ui.rss.article.RssSortActivity"
-            android:launchMode="singleTop" />
+        
         <!-- RSS阅读 -->
-        <activity
-            android:name=".ui.rss.read.ReadRssActivity"
-            android:configChanges="orientation|screenSize"
-            android:hardwareAccelerated="true"
-            android:launchMode="standard" />
+        
         <!-- 导入书籍 -->
         <activity
             android:name=".ui.book.import.local.ImportBookActivity"
@@ -290,13 +262,9 @@
             android:name=".ui.book.explore.ExploreShowActivity"
             android:launchMode="singleTop" />
         <!-- 订阅源调试 -->
-        <activity
-            android:name=".ui.rss.source.debug.RssSourceDebugActivity"
-            android:launchMode="singleTop" />
+        
         <!-- Rss收藏 -->
-        <activity
-            android:name=".ui.rss.favorites.RssFavoritesActivity"
-            android:launchMode="singleTop" />
+        
         <!-- 书签 -->
         <activity
             android:name=".ui.book.bookmark.AllBookmarkActivity"
@@ -306,13 +274,10 @@
             android:name=".ui.book.cache.CacheActivity"
             android:launchMode="singleTop" />
         <!-- WebView界面 -->
-        <activity
-            android:name=".ui.browser.WebViewActivity"
-            android:configChanges="locale|keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
-            android:launchMode="standard" />
+        
         <!-- 书源登录 -->
         <activity
-            android:name="io.legado.app.ui.login.SourceLoginActivity"
+            android:name="com.raen.legere.ui.login.SourceLoginActivity"
             android:configChanges="orientation|screenSize"
             android:hardwareAccelerated="true"
             android:theme="@style/AppTheme.Transparent" />
@@ -475,9 +440,7 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".service.CheckSourceService"
-            android:foregroundServiceType="dataSync" />
+        
         <service
             android:name=".service.CacheBookService"
             android:foregroundServiceType="dataSync" />
@@ -508,9 +471,7 @@
         <service
             android:name=".service.AudioPlayService"
             android:foregroundServiceType="mediaPlayback" />
-        <service
-            android:name=".service.VideoPlayService"
-            android:foregroundServiceType="mediaPlayback" />
+        
         <service
             android:name=".service.DownloadService"
             android:foregroundServiceType="dataSync" />

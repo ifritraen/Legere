@@ -1,12 +1,12 @@
-package io.legado.app
+package com.raen.legere
 
 import com.google.gson.Gson
-import io.legado.app.exception.NoStackTraceException
-import io.legado.app.help.http.okHttpClient
-import io.legado.app.help.update.GiteeRelease
-import io.legado.app.utils.GSON
-import io.legado.app.utils.fromJsonArray
-import io.legado.app.utils.fromJsonObject
+import com.raen.legere.exception.NoStackTraceException
+import com.raen.legere.help.http.okHttpClient
+import com.raen.legere.help.update.GiteeRelease
+import com.raen.legere.utils.GSON
+import com.raen.legere.utils.fromJsonArray
+import com.raen.legere.utils.fromJsonObject
 import okhttp3.Request
 import org.junit.Assert.assertTrue
 import org.junit.Test

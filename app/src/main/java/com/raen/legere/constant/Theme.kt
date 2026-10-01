@@ -1,0 +1,5 @@
+package com.raen.legere.constant
+
+enum class Theme {
+    Dark, Light, Auto, Transparent, EInk;
+}

@@ -106,6 +106,13 @@ import com.raen.legere.ui.widget.PopupAction
 import com.raen.legere.ui.widget.dialog.PhotoDialog
 import com.raen.legere.utils.ACache
 import com.raen.legere.utils.Debounce
+
+// Compose & Haze Imports
+import android.view.ViewGroup
+import androidx.compose.ui.Modifier
+import androidx.compose.foundation.layout.fillMaxSize
+import dev.chrisbanes.haze.HazeState
+import dev.chrisbanes.haze.hazeSource
 import com.raen.legere.utils.LogUtils
 import com.raen.legere.utils.NetworkUtils
 import com.raen.legere.utils.StartActivityContract
@@ -266,9 +273,38 @@ class ReadBookActivity : BaseReadBookActivity(),
     private var justInitData: Boolean = false
     private var syncDialog: AlertDialog? = null
 
+    private val readerHazeState = HazeState()
+
+    private fun setupComposeReaderLayout() {
+        val readView = binding.readView
+        val parent = readView.parent as ViewGroup
+        val index = parent.indexOfChild(readView)
+        parent.removeView(readView)
+
+        val composeRoot = androidx.compose.ui.platform.ComposeView(this).apply {
+            layoutParams = ViewGroup.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        }
+        parent.addView(composeRoot, index)
+
+        composeRoot.setContent {
+            androidx.compose.ui.viewinterop.AndroidView(
+                factory = { readView },
+                modifier = Modifier
+                    .fillMaxSize()
+                    .hazeSource(state = readerHazeState)
+            )
+        }
+
+        binding.readMenu.setupComposeMenu(readerHazeState)
+    }
+
     @SuppressLint("ClickableViewAccessibility")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        setupComposeReaderLayout()
         binding.cursorLeft.setColorFilter(accentColor)
         binding.cursorRight.setColorFilter(accentColor)
         binding.cursorLeft.setOnTouchListener(this)

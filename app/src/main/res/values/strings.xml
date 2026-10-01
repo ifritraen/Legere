@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--App-->
-    <string name="app_name">Legado</string>
-    <string name="app_name_a">Legado·A</string>
-    <string name="app_name_s" translatable="false">LegadoPlus</string>
-    <string name="receiving_shared_label">Legado·search</string>
-    <string name="tip_perm_request_storage">Legado needs storage access to find and read books. please go "App Settings" to allow "Storage permission".</string>
+    <string name="app_name">Legere</string>
+    <string name="app_name_a">Legere·A</string>
+    <string name="app_name_s" translatable="false">LegerePlus</string>
+    <string name="receiving_shared_label">Legere·search</string>
+    <string name="tip_perm_request_storage">Legere needs storage access to find and read books. please go "App Settings" to allow "Storage permission".</string>
 
     <!--Other-->
     <string name="menu_backup">Home</string>
     <string name="menu_restore">Restore</string>
-    <string name="menu_import_old">Import Legado data</string>
+    <string name="menu_import_old">Import Legere data</string>
     <string name="webdav_cache_backup">Offline cache book backup</string>
-    <string name="webdav_cache_backup_s">Export to local and back up to the exports directory under the legado folder</string>
+    <string name="webdav_cache_backup_s">Export to local and back up to the exports directory under the legere folder</string>
     <string name="backup_path">Backup to</string>
     <string name="select_backup_path">Please select a backup path.</string>
     <string name="menu_import_old_version">Import legacy data</string>
@@ -103,7 +103,7 @@
         \u3000\u3000 This is an open source reading software newly developed by Kotlin, welcome to join us.
     </string>
     <string name="app_share_description">
-        Legado (YueDu 3.0) download link：\n https://github.com/gedoor/legado/releases
+        Legere (YueDu 3.0) download link：\n https://github.com/gedoor/legere/releases
     </string>
     <string name="version_name">Version %s</string>
     <string name="pt_background_verification">Background-verification</string>
@@ -574,7 +574,7 @@
     <string name="edit_find">Edit Discovery</string>
     <string name="change_icon_summary">Switch the software icon displayed on the desktop</string>
     <string name="help">Help</string>
-    <string name="my">Me</string>
+    <string name="my">Settings</string>
     <string name="reading">Read</string>
     <string name="battery_show">%d%%</string>
     <string name="timer_m">%d min</string>
@@ -653,7 +653,7 @@
     <string name="app_folder_picker">App folder picker</string>
     <string name="app_file_picker">App file picker</string>
     <string name="a10_permission_toast">Android 10+ unable to read and write file due to permission restrictions</string>
-    <string name="add_to_text_context_menu_s">Long tap to display Legado·Search in the operation menu</string>
+    <string name="add_to_text_context_menu_s">Long tap to display Legere·Search in the operation menu</string>
     <string name="add_to_text_context_menu_t">Text operation display Search</string>
     <string name="record_log">Record log</string>
     <string name="log">Log</string>
@@ -696,7 +696,7 @@
     <string name="btn_default_s">Default</string>
     <string name="main_menu">Main menu</string>
     <string name="request_permission">Tap to grant permission</string>
-    <string name="tip_local_perm_request_storage">Legado needs Storage permission, please tap the "Grant Permission" button below, or go to "Settings"-"Application Permissions"-to open the required permission. If the permission is still not work, please tap "Select Folder" in the upper right corner to use the system folder picker.</string>
+    <string name="tip_local_perm_request_storage">Legere needs Storage permission, please tap the "Grant Permission" button below, or go to "Settings"-"Application Permissions"-to open the required permission. If the permission is still not work, please tap "Select Folder" in the upper right corner to use the system folder picker.</string>
     <string name="alouding_disable">The selected text cannot be spoken in full text speech</string>
     <string name="read_body_to_lh">Extend to cutout</string>
     <string name="toc_updateing">Updating Chapters</string>
@@ -1301,10 +1301,10 @@
     <string name="video_setting_summary">自动播放、全屏播放等配置</string>
     <string name="history">历史记录</string>
     <string name="app_name_sigma">阅读Sigma</string>
-    <string name="about_description_sigma">\u3000\u3000阅读Sigma继承自legado，旨在原版基础上完善和增加功能，欢迎您的加入。</string>
+    <string name="about_description_sigma">\u3000\u3000阅读Sigma继承自legere，旨在原版基础上完善和增加功能，欢迎您的加入。</string>
     <string name="contributors_summary_sigma">gedoor、Luoyacheng、Horis和 Xwite 等，详情请在 GitHub 中查看</string>
     <string name="app_share_description_sigma">
-        阅读 Sigma 下载地址：\nhttps://github.com/Luoyacheng/legado/releases
+        阅读 Sigma 下载地址：\nhttps://github.com/Luoyacheng/legere/releases
     </string>
     <string name="sure_cache_book">是否确认开始缓存？</string>
     <string name="non_printable_set">不可视字符设定</string>
@@ -1342,4 +1342,22 @@
     <string name="is_system_tts_no_export">无法导出系统tts</string>
     <string name="click_image_way">点击图片方式</string>
     <string name="auto_update_summary">每天自动检查软件是否更新</string>
+
+    <!-- Frosted Glass Settings -->
+    <string name="pref_kisara_frosted_glass">磨砂玻璃特效</string>
+    <string name="pref_kisara_frosted_glass_summary">开启底部栏及阅读菜单的磨砂玻璃/毛玻璃模糊效果</string>
+    <string name="pref_bottom_bar_opacity">底部栏不透明度</string>
+    <string name="pref_bottom_bar_blur">底部栏模糊半径</string>
+    <string name="pref_glass_color_type">玻璃底色类型</string>
+    <string name="pref_glass_color_mix">不透明度颜色混合比例</string>
+    <string name="pref_glass_color_mix_summary">在毛玻璃不透明度低时，混合主色调以防文本难以辨认</string>
+    <string name="pref_reader_app_bar_opacity">阅读器菜单不透明度</string>
+    <string name="pref_reader_app_bar_mix">阅读器菜单颜色混合比例</string>
+    <string name="pref_glass_custom_color">自定义玻璃底色</string>
+    <string name="glass_color_type_default">默认背景 (Surface Variant)</string>
+    <string name="glass_color_type_accent">主题强调色 (Primary)</string>
+    <string name="glass_color_type_surface">普通底色 (Surface)</string>
+    <string name="glass_color_type_black">纯黑 (Black)</string>
+    <string name="glass_color_type_white">纯白 (White)</string>
+    <string name="glass_color_type_custom">自定义颜色 (Custom)</string>
 </resources>

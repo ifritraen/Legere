@@ -11,7 +11,8 @@ plugins {
     alias libs.plugins.kotlin.parcelize
     alias libs.plugins.room
     alias libs.plugins.ksp
-    alias libs.plugins.google.services
+    alias libs.plugins.kotlin.compose
+//    alias libs.plugins.google.services
 }
 apply from: 'download.gradle'
 
@@ -19,13 +20,20 @@ static def releaseTime() {
     return new Date().format("yy.MMddHH", TimeZone.getTimeZone("GMT+8"))
 }
 
-def name = "legado"
+def name = "legere"
 def version = "3." + releaseTime()
-def gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
+def gitCommits = 100
+try {
+    gitCommits = providers.exec {
+        commandLine 'git', 'rev-list', 'HEAD', '--count'
+    }.standardOutput.asText.map { it.trim().toInteger() }.getOrElse(100)
+} catch (Exception e) {
+    // fallback
+}
 
 android {
     compileSdk = compile_sdk_version
-    namespace = 'io.legado.app'
+    namespace = 'com.raen.legere'
     kotlin {
         jvmToolchain {
             languageVersion.set(JavaLanguageVersion.of(17))
@@ -47,8 +55,8 @@ android {
         }
     }
     defaultConfig {
-        applicationId "io.legado.app"
-        minSdk 21
+        applicationId "com.raen.legere"
+        minSdk 24
         targetSdk 36
         versionCode 10000 + gitCommits
         versionName version
@@ -71,6 +79,7 @@ android {
     buildFeatures {
         buildConfig = true
         viewBinding = true
+        compose = true
     }
     buildTypes {
         release {
@@ -308,4 +317,13 @@ dependencies {
     implementation(platform(libs.soraEditor.bom))
     implementation(libs.soraEditor.core)
     implementation(libs.soraEditor.language.textmate)
+
+    // Jetpack Compose & Haze
+    implementation platform("androidx.compose:compose-bom:2024.09.03")
+    implementation "androidx.compose.ui:ui"
+    implementation "androidx.compose.material3:material3"
+    implementation "androidx.compose.ui:ui-tooling-preview"
+    implementation "androidx.activity:activity-compose"
+    implementation "androidx.compose.runtime:runtime-livedata"
+    implementation libs.haze
 }

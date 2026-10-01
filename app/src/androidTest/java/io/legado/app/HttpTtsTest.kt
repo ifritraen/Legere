@@ -1,7 +1,7 @@
-package io.legado.app
+package com.raen.legere
 
-import io.legado.app.help.config.AppConfig
-import io.legado.app.model.analyzeRule.AnalyzeUrl
+import com.raen.legere.help.config.AppConfig
+import com.raen.legere.model.analyzeRule.AnalyzeUrl
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
